@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Info Page</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="product-container">
+        <div class="img-container">
+            <div class="product-image" id="product-image">
+                <img src="images/nothing.jpg" alt="Product Image">
+            </div> 
+        </div>
+        <div class="product-details">
+            <h1 class="product-title" id="product-title" style="color: black;">CMF BY NOTHING Phone 1 5G (128 GB) (6 GB RAM) (Black)</h1>
+            <div class="color">
+                <h3>Colour:</h3>
+                <select name="color" id="color">
+                    <option value="Black" id="opt">Black</option>
+                    <option value="Blue" id="opt">Blue</option>
+                    <option value="Light Green" id="opt">Light Green</option>
+                </select>
+            </div>
+            <div class="product-price" id="product-price">
+                ₹16,299
+            </div>
+            <p class="product-description">
+               
+<b>Brand:</b>	CMF BY NOTHING <br>
+<b>Operating System:</b>	Android 14 || Nothing OS 2.6 <br>
+<b>Memory Storage Capacity:</b>	128 GB  <br>
+<b>Model Name:</b>	CMF Phone (1) <br>
+<b>Network Service Provider:</b>	Unlocked for All Carriers <br>
+            </p>
+           
+           <center><button class="buy-button">Buy Now</button></center> 
+        </div>
+    </div>
+    <script>
+        const colorOption = document.getElementById('color');
+        const productImage = document.getElementById('product-image');
+        const productPrice = document.getElementById('product-price');
+        const productTitle = document.getElementById('product-title');
+ 
+        // console.log(colorOption.value);
+        // let color=colorOption.value;
+        
+        colorOption.addEventListener('change', onColorChange);
+
+        function onColorChange(){
+            if(colorOption.value == "Black"){
+            productImage.innerHTML = `
+               <img src="images/nothing.jpg" alt="Product Image">
+            `;
+            productPrice.innerHTML = `
+                <p style="color: black;">₹15,998</p>
+            `;
+            productTitle.innerHTML = `
+                 <h1 class="product-title" id="product-title" style="color: black;font-size: 2em;margin-bottom: 10px;">CMF BY NOTHING Phone 1 5G (128 GB) (6 GB RAM) (Black)</h1>
+            `;
+        }
+        else if(colorOption.value == "Blue"){
+            productImage.innerHTML = `
+               <img src="images/nothing1.jpg" alt="Product Image">
+            `;
+            productPrice.innerHTML = `
+                <p style="color: #097cda;">₹15,998</p>
+            `;
+            productTitle.innerHTML = `
+                 <h1 class="product-title" id="product-title" style="color: #097cda; font-size: 2em;margin-bottom: 10px;">CMF BY NOTHING Phone 1 5G (128 GB) (6 GB RAM) (Light Green)</h1>
+            `;
+        }
+        else if(colorOption.value == "Light Green"){
+            productImage.innerHTML = `
+               <img src="images/nothing2.jpg" alt="Product Image">
+            `;
+            productPrice.innerHTML = `
+               <p style="color: #93d8c3;">₹15,998</p>
+            `;
+            productTitle.innerHTML = `
+                 <h1 class="product-title" id="product-title" style="color: #93d8c3; font-size: 2em;margin-bottom: 10px;">CMF BY NOTHING Phone 1 5G (128 GB) (6 GB RAM) (Light Green)</h1>
+            `;
+        }
+        }
+
+    </script>
+</body>
+</html>
